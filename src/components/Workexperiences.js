@@ -1,47 +1,57 @@
-
-
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
 import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
+import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import SkipNextIcon from '@mui/icons-material/SkipNext';
+
+import { workexperiences } from '../static/constants';
 
 
 export default function Workexperiences() {
   const theme = useTheme();
 
   return (
-    <Grid container spacing={2} justify='centter'>
-        <Grid item xs={12} md={6} lg={3}>
-           <Card>
-               <CardMedia
-               component="img"
-               height="194"
-               image='../../public/static/img/logo/Solactive_logo.png'
-               alt="Paella dish" 
-               />
-               <CardContent>
+      <section id="workExperience">
+            <Grid container spacing={2} justify='centter'>
+                {workexperiences.map(({ company, title, img, responsibility, tech, startDate, endDate })=>(
+                    <Grid item xs={12} md={6} lg={3}>
+                    <Card>
+                        <CardMedia
+                        component="img"
+                        //width="200"
+                        //height="200"
+                        image={img}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {company}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {title} <br/>   
+                                {startDate} - {endDate}
+                            </Typography>
+                            <Typography variant="h6" component="div">
+                                {responsibility} + {tech}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
+                            <Button size="small">Share</Button>
+                            <Button size="small">Learn More</Button>
+                        </CardActions>
+        
+                    </Card>
+                </Grid>
+                
+                ))
 
-               </CardContent>
-
-           </Card>
-        </Grid>
-        <Grid item xs={12} md={6}  lg={3}>
-            <Paper style={{ height:75, width:'100%'}} variant="outlined" />
-        </Grid>
-        <Grid item item xs={12} md={6} lg={3}>
-            <Paper style={{ height:75, width:'100%'}} variant="outlined" />
-        </Grid>
-        <Grid item item xs={12} md={6} lg={3}>
-            <Paper style={{ height:75, width:'100%'}} variant="outlined" />
-        </Grid>
-    </Grid>
+                }
+                
+                
+            </Grid>
+    </section>
   );
 }
+

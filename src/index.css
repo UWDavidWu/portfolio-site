@@ -1,0 +1,20 @@
+div#header {
+    height: 100vh;
+    /* background-image: url('static/img/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    /* background: rgb(170,198,220); */
+}
+
+ul#navbar {
+    /* background-color:black; */
+    position: -webkit-sticky;
+    position:sticky;
+    top: 0;
+    width: 100%;
+}
+
+ul#navbar > li{
+    display: inline;
+}

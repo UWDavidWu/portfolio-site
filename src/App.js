@@ -6,11 +6,28 @@ import Technologies from "./components/Technologies";
 import Illustration from "./components/Illustration";
 import Workexperiences from "./components/Workexperiences";
 
+import { useEffect } from "react"
+
+
 function App() {
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+          });
+      });
+  });
+  });
+
+
   return (
     <div className="App">
-      <Navbar />
+      
       <Header />
+      {/* <Navbar /> */}
       <Illustration />
       <Projects />
       <Workexperiences />
