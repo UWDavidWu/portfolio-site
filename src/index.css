@@ -1,20 +1,249 @@
-div#header {
-    height: 100vh;
-    /* background-image: url('static/img/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
-    /* background: rgb(170,198,220); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background-color: black;
+    /* margin:50px */
+    
 }
 
-ul#navbar {
-    /* background-color:black; */
-    position: -webkit-sticky;
-    position:sticky;
-    top: 0;
-    width: 100%;
+/* a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+} */
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Noto Sans', sans-serif ;
 }
 
-ul#navbar > li{
-    display: inline;
+
+
+section#header {
+  height: 100vh;
+  /* background: url('./static/img/background.png'); */
+}
+
+#header-greeting {
+  font-size: 40px;
+  font-weight: 800;
+  color: lightblue;
+  position: absolute;
+  left:20%;
+  top:20%;
+  /* transform:translateX(-50%); */
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left:90%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right:0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.25);
+  transition-duration: 2s;
+}
+
+ 
+
+nav {
+  background: darkgrey;
+  width:max-content;
+  display:block;
+  padding:0.7rem, 1.7rem;
+  z-index:2;
+  position:fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:2rem;
+  display:flex;
+  gap:0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+
+}
+
+nav a {
+  background: transparent;
+  padding:0.9rem;
+  border-radius: 50%;
+  display:flex;
+  color: rgb(170,198,220);
+  font-size: 1.1rem;;
+}
+
+nav a:hover {
+  background: rgba(0,0,0,0.4);
+  color:white;
+}
+
+nav a:active {
+  background: rgb(170,198,220);
+  color:white;
+}
+
+
+.project 
+{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.project-img {
+  opacity: 0;
+  filter: brightness(60%);
+  animation: fadein 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* .project-img:hover {
+  transform: scale(1.25);
+  transition-duration: 2s;
+}
+
+.project-img:hover ~ .project-name {
+  transform: scale(1.25);
+  transition-duration: 2s;
+} */
+.project span {
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: lightblue;
+  z-index: 100;
+}
+.project span.motion {
+
+  animation: overlay 2s ease forwards;
+  /* sanimation-delay: 0.5s; */
+  opacity: 100%;
+}
+
+
+.project-tech{
+  display:flex;
+  flex-direction: column;
+  gap: 50px;
+  position: absolute;
+  left:2.5%;
+  opacity: 0%;
+  animation: fadein 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+
+
+@keyframes fadein {
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes overlay {
+  50% {
+    width:100%;
+    left:100;
+  }
+  100% {
+    left:0;
+    width:10%;
+  }
+}
+
+
+
+
+.project h2 
+{
+  color:  lightblue;
+	position: absolute;
+	font-size: 3em;
+  left:20%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+  /* text-shadow: -0.08em  0.08em darkgrey; */
+	background: rgba(0,0,0,0.3);
+	padding: 0 20px;
+  /* border-radius: 3rem; */
+  backdrop-filter: blur(15px);
+  opacity: 0;
+  animation: fadein 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+
+.header {
+  font-weight: 800;
+  color: lightblue;
+  text-shadow: -0.08em  0.08em darkblue;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+
+
+
+
+.work-item {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  color:lightblue;
+  /* height: 500px; */
+  align-items: center;
+}
+
+
+
+
+::-webkit-scrollbar-track {
+  background: black; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: lightblue; 
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+
+
+
+
+#prelaoder {
+  background-image:black url("static/img/loader.gif") no-repeat center center;
+  height:100vh;
+  width: 100%;
+  position: fixed;
+  z-index:100;
+}
+
+.project {
+  
 }

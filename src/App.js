@@ -2,15 +2,26 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Projects from "./components/Projects";
-import Technologies from "./components/Technologies";
-import Illustration from "./components/Illustration";
+import Contact from "./components/Contact";
 import Workexperiences from "./components/Workexperiences";
-
+import simpleParallax from 'simple-parallax-js';
 import { useEffect } from "react"
+
 
 
 function App() {
   useEffect(() => {
+    // const images = document.getElementsByClassName('paraImg');
+    // new simpleParallax(images, {orientation: 'down',});
+  //   new simpleParallax(images, {
+  //     delay: 0,
+  //     orientation: 'down',
+  //     scale: 1.3,
+  //     overflow: true,
+  //     customContainer: '.container',
+  //     customWrapper: '.wrapper'
+  // });
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -20,19 +31,24 @@ function App() {
           });
       });
   });
+  return(
+  <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>)
   });
+
 
 
   return (
     <div className="App">
-      
+      <div id="preloader"></div>
+      <Navbar />
       <Header />
-      {/* <Navbar /> */}
-      <Illustration />
       <Projects />
       <Workexperiences />
-      <Technologies />
+      <Contact />
       <Footer />
+      <Header />
     </div>
   );
 }
