@@ -1,7 +1,34 @@
+import SectionHeader from "./SectionHeader"
+
 const Contact = () => {
   return (
+    
     <section id="contact">
-        <h1 className='header text-base sm:text-4xl md:text-7xl lg:text-7xl xl:text-7xl'>&lt;Contact /&gt;</h1>
+        <SectionHeader text={"contact"} />
+        <div className="contact-container">
+          <div className="self-intro">
+            <img src={require('../static/img/selfie.png')} width="300" height="300" alt="selfie" />
+          </div>
+          <div className="contact-form">
+         
+            <div class="space-y-12">
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Name</label>
+              <input class="w-full border border-input-border bg-input px-4 py-4"/>
+            </div>
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Email</label>
+              <input type="email" class="w-full border border-input-border bg-input px-4 py-4"/>
+            </div>
+            <div>
+              <label class="text-white block mb-6 text-xl font-bold">Message</label>
+              <textarea type="email" class="w-full border border-input-border bg-input px-4 py-4 h-56 resize-none"></textarea>
+            </div>
+            <button className='send'>Send it!</button>
+            </div>
+          </div>
+
+        </div>
     </section>
   )
 }

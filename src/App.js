@@ -6,21 +6,12 @@ import Contact from "./components/Contact";
 import Workexperiences from "./components/Workexperiences";
 import simpleParallax from 'simple-parallax-js';
 import { useEffect } from "react"
-
+import  Exp from "./components/Exp";
+import TechIcon from "./components/TechIcon";
 
 
 function App() {
   useEffect(() => {
-    // const images = document.getElementsByClassName('paraImg');
-    // new simpleParallax(images, {orientation: 'down',});
-  //   new simpleParallax(images, {
-  //     delay: 0,
-  //     orientation: 'down',
-  //     scale: 1.3,
-  //     overflow: true,
-  //     customContainer: '.container',
-  //     customWrapper: '.wrapper'
-  // });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -30,11 +21,12 @@ function App() {
               behavior: 'smooth'
           });
       });
+
+      // document.mousemove(function(event) {
+      //   document.querySelector(".hero-icon").css({"left" : event.pageX, "top" : event.pageY});
+      // });
   });
-  return(
-  <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>)
+
   });
 
 
@@ -48,7 +40,7 @@ function App() {
       <Workexperiences />
       <Contact />
       <Footer />
-      <Header />
+
     </div>
   );
 }
