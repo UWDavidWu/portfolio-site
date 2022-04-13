@@ -49,28 +49,36 @@ export const workexperiences = [
 
 export const projects = [
     {
-        name: "NEWS API",
-        description: "Search Breaking News across the web",
+        name: "Top Headlines",
+        description: "Fetch 3rd party API news data and display it in a responsive web application",
         icons:[AiFillApi,SiMaterialui,SiFramer],
-        img:"https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+        img:require('../../src/static/img/projects/project1.png'),
+        github:"https://github.com/UWDavidWu/news-api-frontend",
+        link:"https://news-api-frontend.herokuapp.com/",
     },
     {
         name: "PyMunk",
-        description: "Search Breaking News across the web",
+        description: "Fetch 3rd party API news data and display it in a responsive web application",
         icons:[DiPython,AiFillLinkedin,AiFillThunderbolt],
-        img:"https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        img:require('../../src/static/img/projects/project1.png'),
+        github:"https://github.com/UWDavidWu/news-api-frontend",
+        link:"https://news-api-frontend.herokuapp.com/",
     },
     {
         name: "Example",
         description: "Search Breaking News across the web",
         icons:[AiFillGithub,SiBootstrap,AiFillThunderbolt],
-        img:"https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+        img:require('../../src/static/img/projects/project1.png'),
+        github:"https://github.com/UWDavidWu/news-api-frontend",
+        link:"https://news-api-frontend.herokuapp.com/",
     },
     {
         name: "Example",
         description: "Search Breaking News across the web",
         icons:[AiFillGithub,AiFillLinkedin,AiFillThunderbolt],
-        img:"https://images.unsplash.com/photo-1558655146-d09347e92766?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80",
+        img:require('../../src/static/img/projects/project1.png'),
+        github:"https://github.com/UWDavidWu/news-api-frontend",
+        link:"https://news-api-frontend.herokuapp.com/",
     },
 ]
 
