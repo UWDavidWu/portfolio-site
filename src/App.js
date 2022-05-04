@@ -4,15 +4,15 @@ import Footer from "./components/Footer";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Workexperiences from "./components/Workexperiences";
-import simpleParallax from 'simple-parallax-js';
-import { useEffect, useState } from "react"
-import  Exp from "./components/Exp";
-import TechIcon from "./components/TechIcon";
+import simpleParallax from "simple-parallax-js";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import SectionContainer from "./components/SectionContainer"
+import MediaContextProvider from "./components/MediaContext";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 
 function App() {
+
   useEffect(() => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -24,52 +24,37 @@ function App() {
   },[]);
   });
 
-
-  
-
-  const [currentSection, setCurrentSection] = useState(null)
-  const [scrolly, setScrolly] = useState(0)
   const [display, setDisplay] = useState(false)
-
-  //trackscrolly
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolly(window.scrollY)
-      //set display to true if scroll y is greater than 100vh
-      if(window.scrollY > 100){
-        setDisplay(true)
-      }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+    const handleScroll = () => window.scrollY > 100 ? setDisplay(true) : setDisplay(false)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, []);
+
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    rootMargin: "-200px"
+  })
 
 
-
-  //console log currentSection on currentsection change
-  useEffect(() => {
-    console.log(currentSection)
-  }, [currentSection])
-
-
-  const handleSection = (section) => {
-    setCurrentSection(section)
-  }
 
   return (
-    <div className="App">
-      <div id="parallax_wrapper">
-      <Navbar currentSection={currentSection}/>
-      
-      <SectionContainer children={<Header />} ind={"header"} SectionInView={handleSection} />
-      <SectionContainer children={<Projects />} ind={"projects"} SectionInView={handleSection} />
-      <SectionContainer children={<Workexperiences />} ind={"workExperience"} SectionInView={handleSection} />
-      <SectionContainer children={<Contact />} ind={"contact"} SectionInView={handleSection} />
-      <Footer />
-      </div>
-    </div>
+    <>
+        <MediaContextProvider>
+          <Navbar display={!inView}/>
+          <div ref={ref}>
+          <Header  />
+          </div>
+          <Projects />
+          
+          <Workexperiences />
+
+          <Contact />
+
+          <Footer />
+        </MediaContextProvider>
+
+    </>
   );
 }
 

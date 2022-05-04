@@ -1,28 +1,16 @@
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
-function FadeInWhenVisible({ children }) {
+const Workexperience = ({ work, index }) => {
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
-      }}
+      transition={{ delay: index * 0.5, duration: 1 }}
     >
-      {children}
-    </motion.div>
-  );
-}
-
-const Workexperience = ({ work }) => {
-  return (
-    <FadeInWhenVisible>
       <div className="work-item">
         <div className="work-logo">
-          <img src={work.img} width={80} height={96} alt="" />
+          <img src={work.img} width={96} height={96} alt="" />
         </div>
         <div className="work-timeline">{work.year}</div>
         <div className="work-description">
@@ -30,7 +18,7 @@ const Workexperience = ({ work }) => {
           <div className="work-title">{work.title}</div>
         </div>
       </div>
-    </FadeInWhenVisible>
+    </motion.div>
   );
 };
 

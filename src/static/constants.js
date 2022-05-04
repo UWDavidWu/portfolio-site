@@ -7,6 +7,12 @@ import {
 import {DiPython, DiCss3, DiHtml5, DiJavascript1,DiReact} from "react-icons/di"
 import  {SiMaterialui, SiFramer, SiBootstrap, SiJavascript} from "react-icons/si"
 
+import { MdWork } from "react-icons/md"
+import { AiFillHome, AiFillFile} from 'react-icons/ai';
+import {RiContactsFill} from 'react-icons/ri'
+
+
+
 export const workexperiences = [
     {
         company: "UofT Asset Mgmt Corp.",
@@ -57,11 +63,11 @@ export const projects = [
         link:"https://news-api-frontend.herokuapp.com/",
     },
     {
-        name: "PyMunk",
-        description: "Fetch 3rd party API news data and display it in a responsive web application",
+        name: "Sorting Algorithms Visualizer",
+        description: "Using Python (Pygame) to visualize different sorting algorithms",
         icons:[DiPython,AiFillLinkedin,AiFillThunderbolt],
-        img:require('../../src/static/img/projects/project1.png'),
-        github:"https://github.com/UWDavidWu/news-api-frontend",
+        img:require('../../src/static/img/projects/project2.png'),
+        github:"https://github.com/UWDavidWu/Sorting-Algorithm-Visualizer",
         link:"https://news-api-frontend.herokuapp.com/",
     },
     {
@@ -88,39 +94,69 @@ export const heroIcons = [
     {
         icon: [DiPython],
         name: "Python",
+        period: 3000,
 
     },
     {
         icon: [DiCss3],
         name: "Css",
+        period: 3000,
 
     },
     {
         icon: [DiHtml5],
         name: "Html",
+        period: 4000,
 
     },
     {
         icon: [DiReact],
         name: "React",
+        period: 4000,
+
 
     },
     {
         icon: [SiFramer],
         name: "Framer Motion",
+        period: 5000,
 
     },
     {
         icon: [DiJavascript1],
         name: "Javascript",
+        period: 5000,
 
     },
     {
         icon: [AiFillApi],
         name: "API",
+        period: 3000,
 
     },
 ]
 
+export const navbar_content = [
+    {
+      href: "#header",
+      icon: <AiFillHome />,
+    },
+    {
+      href: "#projects",
+      icon: <AiFillFile />,
+    },
+    {
+      href: "#workExperience",
+      icon:<MdWork />,
+    },
+    {
+      href: "#technologies",
+      icon: <DiCss3 />,
+    },
+    {
+      href: "#contact",
+      icon: <RiContactsFill />,
+    },
 
+  ]
 const selfIntro = "I'm a recent graduate from the University of Waterloo"

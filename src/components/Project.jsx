@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-
+import Icon from "./Icon/Icon";
 import { AiFillGithub } from "react-icons/ai";
 import { DiHeroku } from "react-icons/di";
 
@@ -11,7 +11,7 @@ const Project = ({ project }) => {
 
   return (
     <div ref={Ref} className="project">
-      <img src={project.img} alt="" className="project-img" />
+      <img src={project.img}  alt="" className="project-img" />
       {/* <span className={`${elementVisable? "motion" :''}`}></span> */}
 
       <div className="project-text">
@@ -19,12 +19,9 @@ const Project = ({ project }) => {
         <h2 className="project-description">{project.description}</h2>
 
         <div className="project-cta">
-          <a href={project.github} target="_blank" rel="noopener noreferrer">
-            <AiFillGithub color="lightblue" size="3rem" />
-          </a>
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            <DiHeroku color="lightblue" size="3rem" />
-          </a>
+          <Icon Icon={AiFillGithub} link={project.github} />
+          <Icon Icon={DiHeroku} link={project.heroku} />
+
         </div>
       </div>
     </div>
