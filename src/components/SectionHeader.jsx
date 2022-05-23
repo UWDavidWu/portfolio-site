@@ -1,5 +1,5 @@
 const SectionHeader = ({ text }) => {
-  return <div className="header">&lt;{text} /&gt;</div>;
+  return <div className="header">{text} </div>;
 };
 
 export default SectionHeader;

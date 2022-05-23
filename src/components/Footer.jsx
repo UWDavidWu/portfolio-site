@@ -1,12 +1,6 @@
 const Footer = () => {
-    return (
-    
-				<div>
-					 
-	
-				</div>	
-				
-    )
-}
+  return <footer className="footer">Design & built with <span>‎ ♥ ‎ </span> by David Wu</footer>;
+  
+};
 
-export default Footer
+export default Footer;

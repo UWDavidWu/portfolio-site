@@ -3,6 +3,7 @@ import {
     AiFillLinkedin,
     AiFillThunderbolt,
     AiFillApi,
+    AiFillMail
   } from "react-icons/ai";
 import {DiPython, DiCss3, DiHtml5, DiJavascript1,DiReact} from "react-icons/di"
 import  {SiMaterialui, SiFramer, SiBootstrap, SiJavascript} from "react-icons/si"
@@ -11,7 +12,12 @@ import { MdWork } from "react-icons/md"
 import { AiFillHome, AiFillFile} from 'react-icons/ai';
 import {RiContactsFill} from 'react-icons/ri'
 
-
+import Icon from "../components/Icon/Icon";
+import { ReactComponent as SelfIcon } from './img/Icons/person.svg';
+import { ReactComponent as WorkIcon } from './img/Icons/work.svg';
+import { ReactComponent as ContactIcon } from './img/Icons/contact.svg';
+import { ReactComponent as HomeIcon } from './img/Icons/home.svg';
+import { ReactComponent as ProjectIcon } from './img/Icons/project.svg';
 
 export const workexperiences = [
     {
@@ -58,23 +64,23 @@ export const projects = [
         name: "Top Headlines",
         description: "Fetch 3rd party API news data and display it in a responsive web application",
         icons:[AiFillApi,SiMaterialui,SiFramer],
-        img:require('../../src/static/img/projects/project1.png'),
+        img:require('./img/projects/project1.png'),
         github:"https://github.com/UWDavidWu/news-api-frontend",
         link:"https://news-api-frontend.herokuapp.com/",
     },
     {
-        name: "Sorting Algorithms Visualizer",
+        name: "Sorting Algos Visualizer",
         description: "Using Python (Pygame) to visualize different sorting algorithms",
         icons:[DiPython,AiFillLinkedin,AiFillThunderbolt],
-        img:require('../../src/static/img/projects/project2.png'),
+        img:require('./img/projects/project2.png'),
         github:"https://github.com/UWDavidWu/Sorting-Algorithm-Visualizer",
         link:"https://news-api-frontend.herokuapp.com/",
     },
     {
-        name: "Example",
-        description: "Search Breaking News across the web",
+        name: "Leetcodee Questions Blog",
+        description: "Share my thought process on solving algo problems",
         icons:[AiFillGithub,SiBootstrap,AiFillThunderbolt],
-        img:require('../../src/static/img/projects/project1.png'),
+        img:require('./img/projects/project1.png'),
         github:"https://github.com/UWDavidWu/news-api-frontend",
         link:"https://news-api-frontend.herokuapp.com/",
     },
@@ -82,7 +88,7 @@ export const projects = [
         name: "Example",
         description: "Search Breaking News across the web",
         icons:[AiFillGithub,AiFillLinkedin,AiFillThunderbolt],
-        img:require('../../src/static/img/projects/project1.png'),
+        img:require('./img/projects/project1.png'),
         github:"https://github.com/UWDavidWu/news-api-frontend",
         link:"https://news-api-frontend.herokuapp.com/",
     },
@@ -136,27 +142,43 @@ export const heroIcons = [
     },
 ]
 
+export const social_links = [
+    {
+        icon:[AiFillGithub],
+        href:"https://github.com/UWDavidWu",
+    },
+    {
+        icon:[AiFillLinkedin],
+        href:"https://www.linkedin.com/in/david-wu-a8a8a817b/",
+    },
+    {
+        icon:[AiFillMail],
+        href:"mailto:wu.dinghang@outlook.com",
+    },
+]
+
 export const navbar_content = [
     {
       href: "#header",
-      icon: <AiFillHome />,
+      icon: <HomeIcon />,
     },
     {
-      href: "#projects",
-      icon: <AiFillFile />,
+      href: "#projects",    
+      icon:  <ProjectIcon />,
     },
     {
       href: "#workExperience",
-      icon:<MdWork />,
+      icon: <WorkIcon />,
     },
     {
-      href: "#technologies",
-      icon: <DiCss3 />,
+      href: "#like",
+      icon:<SelfIcon />,
     },
     {
       href: "#contact",
-      icon: <RiContactsFill />,
+      icon: <ContactIcon />,
     },
 
   ]
-const selfIntro = "I'm a recent graduate from the University of Waterloo"
+
+  export const selfIntro = "Hello, my name is David Wu. I'm a recent Math and Business Administration graduate from the University of Waterloo.Technologies always excites me, the beauty of syntax sugar and the structure of frameworks. To create something with the help of technologies is exciting and that's why"

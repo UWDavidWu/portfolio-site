@@ -1,27 +1,11 @@
 import Hero from "./Hero";
 import { useEffect,useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-import Social_Icons from "./Social_Icons";
+
+
+import {FadeInFromBottom, FadeInWhenVisible} from "./Animation/Animation"
 
 
 
-
-function FadeInWhenVisible({ children }) {
-  return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
-      }}
-    >
-      {children}
-    </motion.div>
-  );
-}
 
   
 
@@ -60,21 +44,29 @@ const Header = ({}) => {
   
   return (
     <section  id="header" onMouseMove={handleMouseMove} >
-   
-      <div className="hero-container">
-        <div >David Wu</div>
-        <div >Recent Graduate</div>
-      </div>
-     
 
     
-      <FadeInWhenVisible>
-        <Hero left={MousePosition.left} top={MousePosition.top} down={scrollY}/>
-      </FadeInWhenVisible>
+      <div className="intro">
+      <FadeInFromBottom delay={0.7}> Hi, my name is</FadeInFromBottom>
+      <FadeInFromBottom delay={0.8}>David Wu</FadeInFromBottom>
+      <FadeInFromBottom delay={0.9}>l'm a Recent Graduate from uwaterloo. I've worked at different companies with hands on experiences. Now I'm preparing myself for a spot at a tech company.</FadeInFromBottom>
+      </div>
+      
 
-      <Social_Icons />
+     
+
+      
+      {/* <FadeInWhenVisible>
+        <Hero data-tilt left={MousePosition.left} top={MousePosition.top} down={scrollY}/>
+      </FadeInWhenVisible> */}
+      
+
+      {/* <Social_Icons /> */}
+     
     </section>
   );
 };
 
 export default Header;
+
+

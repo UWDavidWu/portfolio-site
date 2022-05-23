@@ -10,11 +10,12 @@ const Projects = () => {
           <section id="projects">
             <SectionHeader text={"projects"}/>
  
-              <div id="project-container">
+              <div className="project-container">
                 {projects.map( (project, index) => (
-
+                  
+                  
                   <Project project={project} />
-
+                  
                   )
                 )}
               </div>

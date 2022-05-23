@@ -9,51 +9,69 @@ import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import MediaContextProvider from "./components/MediaContext";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
+import TopNav from "./components/TopNav";
+import { useScrollDirection } from "react-use-scroll-direction";
 
 function App() {
-
   useEffect(() => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
+    window.onbeforeunload = () => window.scrollTo(0, 0); //refresh to top of the page
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
       });
-  },[]);
+    }, []);
   });
 
-  const [display, setDisplay] = useState(false)
+  
+  const [direction, setDirection] = useState("up");
+  const { isScrollingUp, isScrollingDown } = useScrollDirection();
+
   useEffect(() => {
-    const handleScroll = () => window.scrollY > 100 ? setDisplay(true) : setDisplay(false)
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, []);
+    isScrollingDown && setDirection("down");
+    isScrollingUp && setDirection("up");
+  }, [isScrollingDown, isScrollingUp]);
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    rootMargin: "-200px"
-  })
+    rootMargin: "-200px",
+  });
 
 
+  //determine if at the bottom of the page
+  const [isBottom, setIsBottom] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const pctScrolled = Math.floor(
+        (window.pageYOffset /
+          (document.body.offsetHeight - window.innerHeight)) *
+          100
+      );
+      pctScrolled > 98 ? setIsBottom(true) : setIsBottom(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
-        <MediaContextProvider>
-          <Navbar display={!inView}/>
+      <MediaContextProvider>
+        <TopNav display={direction === 'up'} />
+        <Navbar display={!inView && !isBottom} />
+        <main>
           <div ref={ref}>
-          <Header  />
+            <Header />
           </div>
           <Projects />
-          
+
           <Workexperiences />
 
           <Contact />
-
-          <Footer />
-        </MediaContextProvider>
-
+        </main>
+        <Footer />
+      </MediaContextProvider>
     </>
   );
 }

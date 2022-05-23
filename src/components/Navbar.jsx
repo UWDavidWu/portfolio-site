@@ -14,7 +14,7 @@ const Navbar = ({display}) => {
             whileHover={{ scale: 1.3 }}
             whileTap={{ scale: 1 }}
           >
-            {navbar_item.icon}
+            {navbar_item.icon} 
           </motion.a>
         ))}
       </nav>
