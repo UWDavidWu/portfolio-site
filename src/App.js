@@ -34,11 +34,26 @@ function App() {
     isScrollingUp && setDirection("up");
   }, [isScrollingDown, isScrollingUp]);
 
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    rootMargin: "-200px",
-  });
+  
+  const [displayNav, setDisplayNav] = useState(false);
 
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+      const fullvh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      position > fullvh? setDisplayNav(true): setDisplayNav(false);
+  };
+  
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+  
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
 
   //determine if at the bottom of the page
   const [isBottom, setIsBottom] = useState(false);
@@ -58,10 +73,10 @@ function App() {
   return (
     <>
       <MediaContextProvider>
-        <TopNav display={direction === 'up'} />
-        <Navbar display={!inView && !isBottom} />
+        <TopNav pos={scrollPosition===0} display={direction === 'up'||!displayNav} />
+        <Navbar display={displayNav && !isBottom} />
         <main>
-          <div ref={ref}>
+          <div >
             <Header />
           </div>
           <Projects />

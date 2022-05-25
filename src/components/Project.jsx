@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import Icon from "./Icon/Icon";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { FadeInFromBottom,FadeInWhenVisible } from "./Animation/Animation";
+import { FadeInFromBottom,FadeInWhenVisible,Hover } from "./Animation/Animation";
 
 
 const Project = ({ project }) => {
@@ -12,7 +12,7 @@ const Project = ({ project }) => {
 
   return (
     <div ref={Ref} className="project">
-      <div className="card">
+      <Hover className="card">
         <img src={project.img} alt="" className="project-img" />
         <div className="project-content">
           <FadeInFromBottom><h2 className="project-name">{project.name}</h2></FadeInFromBottom>
@@ -26,7 +26,7 @@ const Project = ({ project }) => {
           </div>
           </FadeInWhenVisible>
         </div>
-      </div>
+      </Hover>
     </div>
   );
 };

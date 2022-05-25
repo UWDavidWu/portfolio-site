@@ -28,15 +28,15 @@ export function FadeInFromBottom({ delay=0, duration=0.5, children }) {
       );
     }
 
-  export  function FadeInFromTop({ delay=0, duration=0.5, children }) {
-        return (
-          <motion.header
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: duration, delay: delay }}
+    export function Hover({ children }) {
+      return (
+          <motion.div
+            whileHover={{ y: -10 }}
+            className="card"
           >
             {children}
-          </motion.header>
+          </motion.div>
         );
       }
+
+

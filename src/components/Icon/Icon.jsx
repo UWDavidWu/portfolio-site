@@ -10,7 +10,7 @@ const Icon = ({Icon, link}) => {
       whileTap={{ scale: 0.9 }}
     >
       
-    <Icon color="lightblue" size="3rem" />
+    <Icon size="3rem" />
       
     </motion.a>
   )
