@@ -1,5 +1,4 @@
-
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 
 export function FadeInFromBottom({ delay=0, duration=0.5, children }) {
@@ -15,6 +14,21 @@ export function FadeInFromBottom({ delay=0, duration=0.5, children }) {
     );
   }
   
+  export function ColorChange({ delay=0, duration=0.5, children }) {
+    return (
+      <motion.div
+      // alternate the color
+        
+        animate={{ color: ['#cfccc9', '#f0d974']}}
+        transition={{ ease: "linear",delay:delay, repeatDelay:2, duration: 0.5, repeat: Infinity ,repeatType: "reverse" }}
+      >
+        {children}
+      </motion.div>
+    );
+  }
+  
+
+
   export function FadeInWhenVisible({ delay=0.5,children }) {
     return (
         <motion.div
@@ -27,16 +41,5 @@ export function FadeInFromBottom({ delay=0, duration=0.5, children }) {
         </motion.div>
       );
     }
-
-    export function Hover({ children }) {
-      return (
-          <motion.div
-            whileHover={{ y: -10 }}
-            className="card"
-          >
-            {children}
-          </motion.div>
-        );
-      }
 
 

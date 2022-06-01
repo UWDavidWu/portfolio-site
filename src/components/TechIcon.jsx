@@ -1,34 +1,46 @@
-import { useEffect, useState } from "react";
 
-const TechIcon = ({ Icon, Name, period }) => {
-  const classNameAlternate = ["hero-icon", "hero-icon active"];
-  const [classnameIndex, setclassnameIndex] = useState(0);
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { motion } from "framer-motion";
 
-  //change classnameIndex to 1 after period
-  useEffect(() => {
-    const interval = setInterval(() => {
-      classnameIndex === 0 ? setclassnameIndex(1) : setclassnameIndex(0);
-
-    }, period);
-
-    return () => clearInterval(interval);
-  }, [classnameIndex]);
-
-
-
-
+function FadeInWhenVisible({ delay = 0, children }) {
   return (
-    <div
-      className={classNameAlternate[classnameIndex]}
-      style={{ position: "relative" }}
+    <motion.span
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: delay }}
     >
-      <div className="hero-icon-sub">
-        <Icon size="3rem" />
+      {children}
+    </motion.span>
+  );
+}
+
+const TechIcon = ({ Icon, Name, Level }) => {
+  return (
+    <div className="hero-icon">
+      <div className="hero-icon-icon">
+        <Icon />
+        <Icon />
       </div>
-      <div className="hero-icon-main">
-        <Icon size="3rem" />
+
+      <div
+        className="hero-icon-detail"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div className="hero-icon-name">{Name}</div>
+        <div className="star">
+          {[...Array(Level)].map((e, i) => (
+            <FadeInWhenVisible key={i} delay={i * 0.5}>
+              <AiFillStar />
+            </FadeInWhenVisible>
+          ))}
+          {[...Array(3 - Level)].map((e, i) => (
+            <FadeInWhenVisible key={i} delay={0.5 * (Level + i)}>
+              <AiOutlineStar />
+            </FadeInWhenVisible>
+          ))}
+        </div>
       </div>
-      <div className="hero-icon-name">{Name}</div>
     </div>
   );
 };
