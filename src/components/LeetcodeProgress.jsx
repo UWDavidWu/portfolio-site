@@ -90,7 +90,7 @@ const LeetcodeProgress = () => {
             bgcolor={color["yellow"]}
             description={"Medium"}
             current={medium}
-            aim={120}
+            aim={70}
           />
           <ProgressBar
             bgcolor={color["red"]}
