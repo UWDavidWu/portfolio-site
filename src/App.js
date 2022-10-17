@@ -1,14 +1,14 @@
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Projects from "./components/Projects";
+import Footer from "./components/Footer/Footer";
+import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact";
-import Workexperiences from "./components/Workexperiences";
+import Workexperiences from "./components/WorkExperience/Workexperiences";
 import { useEffect, useState } from "react";
 import MediaContextProvider from "./components/MediaContext";
-import TopNav from "./components/TopNav";
+import TopNav from "./components/TopNav/TopNav";
 import { useScrollDirection } from "react-use-scroll-direction";
-import Technologies from "./components/Technologies";
+import Technologies from "./components/Technologies/Technologies";
 
 function App() {
   const fullvh = Math.max(
@@ -61,8 +61,10 @@ function App() {
   return (
     <>
       <MediaContextProvider>
+
+
         <TopNav
-          pos={scrollPosition === 0}
+          pos={scrollPosition === 0} //add shadow after scrolling
           display={direction === "up" || !displayNav}
         />
         <Navbar display={displayNav && !isBottom} />

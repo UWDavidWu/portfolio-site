@@ -1,7 +1,7 @@
 const SectionHeader = ({ text, id, children }) => {
   return (
     <section id={id}>
-      <div className="header">{text} </div>
+      <div className="header">{text}</div>
       {children}
     </section>
   );

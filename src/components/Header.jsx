@@ -7,6 +7,7 @@ const Header = () => {
   ];
   return (
     <section id="header">
+
       <div className="intro">
         {intro.map((item, index) => (
           <FadeInFromBottom key={index} delay={0.9 + 0.2 * index}>
@@ -23,6 +24,7 @@ const Header = () => {
           </a>
         </FadeInFromBottom>
       </div>
+
     </section>
   );
 };

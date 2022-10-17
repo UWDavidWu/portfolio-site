@@ -35,8 +35,10 @@ export const workexperiences = [
       </div>
     ),
     duration: "2021  May - Aug",
-    id: 1,
+    id: 0,
     img: require("../../src/static/img/logo/UTAM_logo.png"),
+    recommendation: {avatar:require("../../src/static/img/logo/UTAM_logo.png"),name:"George Taylor", title:"Director, Faculty Budget and Finance", content:"Dinghang was wonderful to work with. He has exceptional coding skills and was a willing listener and learner. He consistently demonstrated a strong work ethic and a dedication to completing his projects in a timely and reliable fashion. Dinghang is self-motivated, methodical and very capable. He is not only a reliable and forward thinking Data Analyst but an outstanding team player with a positive attitude towards work, Dinghang would be a strong asset to any organization."},
+    
   },
   {
     company: "Solactive Americas Inc.",
@@ -54,7 +56,7 @@ export const workexperiences = [
       </div>
     ),
     duration: "2020  Sep - Dec",
-    id: 2,
+    id: 1,
     img: require("../../src/static/img/logo/Solactive_logo.png"),
   },
   {
@@ -73,42 +75,42 @@ export const workexperiences = [
       </div>
     ),
     duration: "2019  Sep - Dec",
-    id: 3,
+    id: 2,
     img: require("../../src/static/img/logo/Utoronto_logo.png"),
   },
-  {
-    company: "Unity Health Toronto",
-    title: "Junior project Accountant",
-    responsibility: (
-      <div>
-        Designed payroll reports for government funding and automated the
-        process using VBA <br />
-        <br />
-        Prepared forecast-actuals reports and performed expense analysis,
-        facilitated the reconstruction <br />
-        <br />
-        Consolidated chart of accounts from three hospitals, assisted in the
-        business integration process
-      </div>
-    ),
-    duration: "2019  Jan - Apr",
-    id: 4,
-    img: require("../../src/static/img/logo/UHT_logo.png"),
-  },
+  // {
+  //   company: "Unity Health Toronto",
+  //   title: "Junior project Accountant",
+  //   responsibility: (
+  //     <div>
+  //       Designed payroll reports for government funding and automated the
+  //       process using VBA <br />
+  //       <br />
+  //       Prepared forecast-actuals reports and performed expense analysis,
+  //       facilitated the reconstruction <br />
+  //       <br />
+  //       Consolidated chart of accounts from three hospitals, assisted in the
+  //       business integration process
+  //     </div>
+  //   ),
+  //   duration: "2019  Jan - Apr",
+  //   id: 3,
+  //   img: require("../../src/static/img/logo/UHT_logo.png"),
+  // },
 ];
 
 export const projects = [
   {
-    name: "Top Headlines",
+    name: "Headlines",
     description:
-      "Fetch 3rd party API news data and display it in a responsive web application",
+      "MERN stack web application  ",
     img: require("./img/projects/project1.png"),
-    tech: "React MaterialUI Express Axios Heroku",
+    tech: "MongoDB Express React Nodejs Redis",
     github: "https://github.com/UWDavidWu/news-api-frontend",
     link: "https://news-api-frontend.herokuapp.com/",
   },
   {
-    name: "Sorting Algos Visualizer",
+    name: "Algo Visualizer",
     description:
       "Using Python (Pygame) to visualize different sorting algorithms",
     img: require("./img/projects/project2.png"),
@@ -117,7 +119,7 @@ export const projects = [
     link: "https://uwdavidwu.com/",
   },
   {
-    name: "Leetcode Blog",
+    name: "Python",
     description: "A blog for leetcode problems",
     img: require("./img/projects/project3.png"),
     tech: "React Tailwindcss MongoDB Express",
@@ -126,7 +128,7 @@ export const projects = [
   },
   {
     name: "UWDavidWu.com",
-    description: "Personal Portfolio Website with rich animation and interaction",
+    description: "Personal portfolio Website build with React.js, Framer Motion with responsive design",
     img: require("./img/projects/project4.png"),
     tech: "React FramerMotion Vercel",
     github: "https://https://github.com/UWDavidWu/react.js_portfolio",

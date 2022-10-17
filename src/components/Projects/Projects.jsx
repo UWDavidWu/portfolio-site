@@ -1,8 +1,9 @@
-import { projects } from "../static/constants";
-import SectionHeader from "./SectionHeader";
-import Icon from "./Icon";
+import { projects } from "../../static/constants";
+import SectionHeader from "../SectionHeader";
+import Icon from "../Icon";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
-import { FadeInFromBottom, FadeInWhenVisible } from "./Animation";
+import { FadeInFromBottom, FadeInWhenVisible } from "../Animation";
+import "./Projects.css"
 
 const Projects = () => {
   return (
@@ -10,7 +11,6 @@ const Projects = () => {
       <div className="project-container">
         {projects.map((project, index) => (
           <div className="project" key={index}>
-            <div className="card">
               <img src={project.img} alt="" className="project-img" />
               <div className="project-content">
                 <FadeInFromBottom>
@@ -23,15 +23,15 @@ const Projects = () => {
                 </FadeInFromBottom>
                 <FadeInWhenVisible delay={0.2}>
                   <div className="project-detail">
-                    <div className="project-tech">{project.tech}</div>
                     <div className="project-cta">
                       <Icon Icon={FiGithub} link={project.github} />
+                      <h5>{project.tech}</h5>
                       <Icon Icon={FiExternalLink} link={project.link} />
                     </div>
                   </div>
                 </FadeInWhenVisible>
               </div>
-            </div>
+            
           </div>
         ))}
       </div>

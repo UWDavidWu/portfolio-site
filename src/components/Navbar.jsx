@@ -20,7 +20,7 @@ const Navbar = ({ display }) => {
               animate={{
                 y: 0,
                 opacity: 1,
-                transition: { duration: 0.5, delay: 0.5 + index * 0.1 },
+                transition: { duration: 0.5, delay: 0.2  },
               }}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}

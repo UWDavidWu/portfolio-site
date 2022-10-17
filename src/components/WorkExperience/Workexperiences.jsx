@@ -1,10 +1,27 @@
-import { workexperiences } from "../static/constants";
-import SectionHeader from "./SectionHeader";
-import { useState } from "react";
+import { workexperiences } from "../../static/constants";
+import SectionHeader from "../SectionHeader";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "./Workexperiences.css";
 
 const Workexperiences = () => {
+
+  const [run, setRun] = useState(true);
   const [selectedTab, setSelectedTab] = useState(workexperiences[0]);
+
+  //set selectedTab to current +1 every 2 seconds with max of workexperiences.length
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setSelectedTab(workexperiences[(selectedTab.id + 1) % workexperiences.length]);
+  //   } , 3000);
+  //   return () => clearInterval(interval);
+  // } , [selectedTab]);
+  
+
+
+  
+
+  
 
   return (
     <SectionHeader text="Work" id="workExperience">
@@ -15,9 +32,9 @@ const Workexperiences = () => {
               <li
                 key={item.id}
                 className={item.id === selectedTab.id ? "selected" : ""}
-                onClick={() => setSelectedTab(item)}
+                onMouseOver={() => setSelectedTab(item)}
               >
-                {`${item.duration}`}
+                {item.duration}
                 {item.id === selectedTab.id ? (
                   <motion.div className="underline" layoutId="underline" />
                 ) : null}
@@ -61,6 +78,9 @@ const Workexperiences = () => {
                 </div>
               </div>
               {selectedTab.responsibility}
+
+              
+
             </motion.div>
           </AnimatePresence>
         </main>

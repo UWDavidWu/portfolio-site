@@ -1,7 +1,8 @@
-import SiteLogo from "../static/img/site-logo.png";
-import { social_links } from "../static/constants";
-import Icon from "./Icon";
+import SiteLogo from "../../static/img/site-logo.png";
+import { social_links } from "../../static/constants";
+import Icon from "../Icon";
 import { motion, AnimatePresence } from "framer-motion";
+import "./TopNav.css";
 
 const TopNav = ({ pos, display }) => {
   return (
