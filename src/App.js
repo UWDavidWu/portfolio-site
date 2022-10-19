@@ -67,7 +67,7 @@ function App() {
           pos={scrollPosition === 0} //add shadow after scrolling
           display={direction === "up" || !displayNav}
         />
-        <Navbar display={displayNav && !isBottom} />
+        <Navbar display={true } />
         <main>
           <Header />
 
@@ -75,7 +75,7 @@ function App() {
 
           <Workexperiences />
 
-          {/* <Contact /> */}
+          <Contact />
           <Technologies />
 
         </main>

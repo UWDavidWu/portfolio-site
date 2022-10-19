@@ -1,4 +1,5 @@
 import { FadeInFromBottom, ColorChange } from "./Animation";
+import resume from "../static/David_Wu.pdf";
 const Header = () => {
   const intro = [
     ["Name", "David Wu"],
@@ -19,7 +20,7 @@ const Header = () => {
           </FadeInFromBottom>
         ))}
         <FadeInFromBottom delay={1.5}>
-          <a href="/test.txt" download>
+          <a href={resume} download>
             <button className="download">&#x2913; Download Resume</button>{" "}
           </a>
         </FadeInFromBottom>

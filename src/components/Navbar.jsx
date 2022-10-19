@@ -10,7 +10,7 @@ const Navbar = ({ display }) => {
           initial={{ translateX: "-50%", y: 80 }}
           animate={{ translateX: "-50%", y: 0 }}
           exit={{ translateX: "-50%", y: 80 }}
-          transition={{ duration: 0.5 }}
+          transition={{ delay:2, duration: 0.5 }}
         >
           {navbar_content.map((navbar_item, index) => (
             <motion.a

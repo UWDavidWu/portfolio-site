@@ -1,8 +1,4 @@
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiFillMail,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 
 import {
   DiPython,
@@ -21,38 +17,39 @@ import { FiHome, FiUser, FiBriefcase, FiAward, FiFile } from "react-icons/fi";
 export const workexperiences = [
   {
     company: "UofT Asset Mgmt Corp.",
-    title: "Portfolio Analytics Intern",
+    title: "Risk and Research Analyst",
     responsibility: (
       <div>
-        Automated the Index Selection and Rebalancing process using Python and
-        VBA <br />
+        Developed a web service with Flask and MySQL to support CRUD operations
+        to risk portfolios through REST APIs, implemented client-side and
+        server-side parameter validations to eliminate potential errors by 40%{" "}
         <br />
-        Obtained the latest Market datasets from Factset, Bloomberg, implemented
-        in internal projects <br />
         <br />
-        Researched different types of Indices, identified and validated if
-        criteria are feasible
+        Automated the risk monitoring workflow by executing SQL stored
+        procedures with dynamic parameters using Python, replaced manual
+        operations and reduced time spent by 60% <br />
       </div>
     ),
     duration: "2021  May - Aug",
     id: 0,
     img: require("../../src/static/img/logo/UTAM_logo.png"),
-    recommendation: {avatar:require("../../src/static/img/logo/UTAM_logo.png"),name:"George Taylor", title:"Director, Faculty Budget and Finance", content:"Dinghang was wonderful to work with. He has exceptional coding skills and was a willing listener and learner. He consistently demonstrated a strong work ethic and a dedication to completing his projects in a timely and reliable fashion. Dinghang is self-motivated, methodical and very capable. He is not only a reliable and forward thinking Data Analyst but an outstanding team player with a positive attitude towards work, Dinghang would be a strong asset to any organization."},
-    
+    recommendation: {
+      avatar: require("../../src/static/img/logo/UTAM_logo.png"),
+      name: "George Taylor",
+      title: "Director, Faculty Budget and Finance",
+      content:
+        "Dinghang was wonderful to work with. He has exceptional coding skills and was a willing listener and learner. He consistently demonstrated a strong work ethic and a dedication to completing his projects in a timely and reliable fashion. Dinghang is self-motivated, methodical and very capable. He is not only a reliable and forward thinking Data Analyst but an outstanding team player with a positive attitude towards work, Dinghang would be a strong asset to any organization.",
+    },
   },
   {
     company: "Solactive Americas Inc.",
     title: "Index Analyst",
     responsibility: (
       <div>
-        Automated the Index Selection and Rebalancing process using Python and
-        VBA <br />
+        Consolidated Market data from Bloomberg, Factset, and Reuters using Excel VBA and Python, automated monthly calculations for 15+ investment portfolios which increased efficiency by 50% <br />
         <br />
-        Obtained the latest Market datasets from Factset, Bloomberg, implemented
-        in internal projects <br />
+        Documented 3+ data processing pipelines with technical details, improved the clarity of communication materials  <br />
         <br />
-        Researched different types of Indices, identified and validated if
-        criteria are feasible
       </div>
     ),
     duration: "2020  Sep - Dec",
@@ -64,74 +61,70 @@ export const workexperiences = [
     title: "Data Analyst",
     responsibility: (
       <div>
-        Data Analytics: data cleaning, extraction, analysis and visualization{" "}
+        Implemented a Hash map data structure using Python and Tkinter as GUI which links account numbers with account names, reduced the lookup time complexity to O(1) which is 70% faster than previous versions
         <br />
         <br />
-        Maintained the complex faculty database in SPSS, provided Ad hoc support
-        to the data team <br />
+        Processed data using Pandas and built interactive, real-time visualizations using Tableau and Matplotlib, prepared executive-level presentations to articulate key statistics and results from mathematical analysis <br />
         <br />
-        Retrieved data from reports and created Tableau dashboards, visualized
-        faculty datasets
       </div>
     ),
     duration: "2019  Sep - Dec",
     id: 2,
     img: require("../../src/static/img/logo/Utoronto_logo.png"),
   },
-  // {
-  //   company: "Unity Health Toronto",
-  //   title: "Junior project Accountant",
-  //   responsibility: (
-  //     <div>
-  //       Designed payroll reports for government funding and automated the
-  //       process using VBA <br />
-  //       <br />
-  //       Prepared forecast-actuals reports and performed expense analysis,
-  //       facilitated the reconstruction <br />
-  //       <br />
-  //       Consolidated chart of accounts from three hospitals, assisted in the
-  //       business integration process
-  //     </div>
-  //   ),
-  //   duration: "2019  Jan - Apr",
-  //   id: 3,
-  //   img: require("../../src/static/img/logo/UHT_logo.png"),
-  // },
+  {
+    company: "Unity Health Toronto",
+    title: "Junior project Accountant",
+    responsibility: (
+      <div>
+        Designed payroll reports for government funding  <br />
+        <br />
+        Prepared forecast-actuals reports and performed expense analysis
+        <br />
+        <br />
+        Consolidated chart of accounts from three hospitals, assisted in the
+        business integration process
+      </div>
+    ),
+    duration: "2019  Jan - Apr",
+    id: 3,
+    img: require("../../src/static/img/logo/UHT_logo.png"),
+  },
 ];
 
 export const projects = [
   {
-    name: "Headlines",
-    description:
-      "MERN stack web application  ",
+    name: "Headlines Now",
+    description: "MERN stack web application  ",
     img: require("./img/projects/project1.png"),
-    tech: "MongoDB Express React Nodejs Redis",
-    github: "https://github.com/UWDavidWu/news-api-frontend",
-    link: "https://news-api-frontend.herokuapp.com/",
+    tech: "MongoDB Express React Nodejs",
+    github: "https://github.com/UWDavidWu/news-react-fullstack",
+    link: "https://headlines.uwdavidwu.com",
   },
   {
-    name: "Algo Visualizer",
+    name: "Go News Backend",
     description:
-      "Using Python (Pygame) to visualize different sorting algorithms",
+      "Highly available microservice architecture through Kubernetes cluster on AWS EKS using K9s ",
     img: require("./img/projects/project2.png"),
-    tech: "Python",
-    github: "https://github.com/UWDavidWu/Sorting-Algorithm-Visualizer",
-    link: "https://uwdavidwu.com/",
+    tech: "Go PostgreSQL Kubernetes Docker AWS",
+    github: "https://github.com/UWDavidWu/news-go-backend",
+    link: "",
   },
   {
-    name: "Python",
-    description: "A blog for leetcode problems",
+    name: "Headlines NLP",
+    description: "Sentiment Analysison on headlines, provided trendy topics for News readers",
     img: require("./img/projects/project3.png"),
-    tech: "React Tailwindcss MongoDB Express",
-    github: "https://github.com/UWDavidWu/news-api-frontend",
-    link: "https://uwdavidwu.com/",
+    tech: "Python",
+    github: "https://github.com/UWDavidWu/news-python-nlp",
+    link: "",
   },
   {
-    name: "UWDavidWu.com",
-    description: "Personal portfolio Website build with React.js, Framer Motion with responsive design",
+    name: "uwdavidwu.com",
+    description:
+      "Mobile-first, cross-platform, responsive portfolio site ",
     img: require("./img/projects/project4.png"),
     tech: "React FramerMotion Vercel",
-    github: "https://https://github.com/UWDavidWu/react.js_portfolio",
+    github: "https://github.com/UWDavidWu/portfolio-site",
     link: "https://uwdavidwu.com/",
   },
 ];
@@ -221,5 +214,3 @@ export const navbar_content = [
 
 export const selfIntro =
   "I'm still constructing this part so please check back later Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo nam a ipsa rem? Ratione, quod possimus vel non modi velit distinctio aut ut enim deserunt tempora consequatur odio cupiditate!";
-
-

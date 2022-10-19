@@ -24,9 +24,9 @@ const Projects = () => {
                 <FadeInWhenVisible delay={0.2}>
                   <div className="project-detail">
                     <div className="project-cta">
-                      <Icon Icon={FiGithub} link={project.github} />
-                      <h5>{project.tech}</h5>
-                      <Icon Icon={FiExternalLink} link={project.link} />
+                      {project.github && <Icon Icon={FiGithub} link={project.github} />}
+                      {/* <h5>{project.tech}</h5> */}
+                      {project.link && <Icon Icon={FiExternalLink} link={project.link} />}
                     </div>
                   </div>
                 </FadeInWhenVisible>

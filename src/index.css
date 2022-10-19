@@ -7,6 +7,7 @@
   --themecolor-default: #cfccc9;
   --nav-blue-dark: #06101a;
   --nav-blue-light: #214971;
+  --themecolor-text: #8b949e;
 
   --themecolor-darkgrey: rgb(33,38,45);
   --themecolor-grey: rgb(33,38,45);
@@ -47,8 +48,8 @@ section {
 
 section#header {
   height: 100vh;
-  background-image: url("../public/static/img/background.jpg");
-  background-color: var(--themecolor-grey);
+  /* background-image: url("../public/static/img/background.jpg"); */
+  /* background-color: var(--themecolor-grey); */
 }
 
 .download {
@@ -180,7 +181,11 @@ section#header {
 }
 
 
-
+@media only screen and (max-width: 768px) {
+  .bottom-nav {
+    zoom: 0.75;
+  }
+}
 
 #intro-text {
   font-size: 20px;
