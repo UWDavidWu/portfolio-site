@@ -53,7 +53,7 @@
       grid-template-columns: 1fr 1fr 1fr;
       padding:40px;
       gap:2rem;
-      padding: 10px;
+      padding: 10px;  
     }
   
     .hero-icon svg {

@@ -75,7 +75,7 @@ function App() {
 
           <Workexperiences />
 
-          <Contact />
+          {/* <Contact /> */}
           <Technologies />
 
         </main>
