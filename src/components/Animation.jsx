@@ -19,7 +19,7 @@ export function FadeInFromBottom({ delay=0, duration=0.5, children }) {
       <motion.div
       // alternate the color
         
-        animate={{ color: ['#ffffff', '#C69BF5']}}
+        animate={{ color: ['#ffffff', '#A5C9CA']}}
         transition={{ ease: "linear",delay:delay, repeatDelay:2, duration: 0.5, repeat: Infinity ,repeatType: "reverse" }}
       >
         {children}

@@ -1,9 +1,12 @@
+
 .work-card {
 
+  margin: 0 auto;
+  background-color: rgb(28, 29, 37, 0.45);
   width: 100%;
   height: 60vh;
   border-radius: 10px;
-  background: var(--themecolor-background);
+
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -67,8 +70,8 @@ li {
 }
 
 li.selected {
-  color: var(--themecolor-main);
-  background: var(--nav-blue-light);
+  color: var(--themecolor-main-light);
+  background: var(--themecolor-main);
 }
 
 li button {
@@ -89,6 +92,10 @@ li button {
 .work-company {
   font-size: 20px;
   color: var(--themecolor-main);
+}
+
+.work-responsibility {
+  color: var(--themecolor-text)
 }
 
 @media only screen and (min-width: 768px) {

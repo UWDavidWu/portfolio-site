@@ -8,15 +8,19 @@ import {
   DiReact,
   DiNodejs,
   DiMongodb,
+
 } from "react-icons/di";
 
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiKubernetes } from "react-icons/si";
 
-import { FiHome, FiUser, FiBriefcase, FiAward, FiFile } from "react-icons/fi";
+import {FaAws} from "react-icons/fa";
+
+import { FiHome, FiUser, FiBriefcase, FiAward, FiFile, } from "react-icons/fi";
 
 export const workexperiences = [
   {
     company: "UofT Asset Mgmt Corp.",
+    tabName: "UTAM",
     title: "Risk and Research Analyst",
     responsibility: (
       <div>
@@ -43,6 +47,7 @@ export const workexperiences = [
   },
   {
     company: "Solactive Americas Inc.",
+    tabName: "Solactive",
     title: "Index Analyst",
     responsibility: (
       <div>
@@ -58,6 +63,7 @@ export const workexperiences = [
   },
   {
     company: "University of Toronto",
+    tabName: "UofT",
     title: "Data Analyst",
     responsibility: (
       <div>
@@ -72,24 +78,24 @@ export const workexperiences = [
     id: 2,
     img: require("../../src/static/img/logo/Utoronto_logo.png"),
   },
-  {
-    company: "Unity Health Toronto",
-    title: "Junior project Accountant",
-    responsibility: (
-      <div>
-        Designed payroll reports for government funding  <br />
-        <br />
-        Prepared forecast-actuals reports and performed expense analysis
-        <br />
-        <br />
-        Consolidated chart of accounts from three hospitals, assisted in the
-        business integration process
-      </div>
-    ),
-    duration: "2019  Jan - Apr",
-    id: 3,
-    img: require("../../src/static/img/logo/UHT_logo.png"),
-  },
+  // {
+  //   company: "Unity Health Toronto",
+  //   title: "Junior project Accountant",
+  //   responsibility: (
+  //     <div>
+  //       Designed payroll reports for government funding  <br />
+  //       <br />
+  //       Prepared forecast-actuals reports and performed expense analysis
+  //       <br />
+  //       <br />
+  //       Consolidated chart of accounts from three hospitals, assisted in the
+  //       business integration process
+  //     </div>
+  //   ),
+  //   duration: "2019  Jan - Apr",
+  //   id: 3,
+  //   img: require("../../src/static/img/logo/UHT_logo.png"),
+  // },
 ];
 
 export const projects = [
@@ -136,13 +142,13 @@ export const heroIcons = [
     level: 3,
   },
   {
-    icon: [DiCss3],
-    name: "Css",
+    icon: [SiKubernetes],
+    name: "Kubernetes",
     level: 2,
   },
   {
     icon: [DiHtml5],
-    name: "Html",
+    name: "Html/CSS",
     level: 3,
   },
   {
@@ -171,6 +177,11 @@ export const heroIcons = [
     name: "MongoDB",
     level: 2,
   },
+  {
+    icon: [FaAws],
+    name: "AWS",
+    level: 2,
+  },
 ];
 
 export const social_links = [
@@ -184,7 +195,7 @@ export const social_links = [
   },
   {
     icon: [AiFillMail],
-    href: "mailto:wu.dinghang@outlook.com",
+    href: "mailto:uwdavidwu@outlook.com",
   },
 ];
 
@@ -213,4 +224,4 @@ export const navbar_content = [
 ];
 
 export const selfIntro =
-  "I'm still constructing this part so please check back later Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur illo nam a ipsa rem? Ratione, quod possimus vel non modi velit distinctio aut ut enim deserunt tempora consequatur odio cupiditate!";
+  "";

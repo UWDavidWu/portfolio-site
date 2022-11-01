@@ -34,7 +34,7 @@ const Workexperiences = () => {
                 className={item.id === selectedTab.id ? "selected" : ""}
                 onMouseOver={() => setSelectedTab(item)}
               >
-                {item.duration}
+                {item.tabName}
                 {item.id === selectedTab.id ? (
                   <motion.div className="underline" layoutId="underline" />
                 ) : null}
@@ -77,7 +77,10 @@ const Workexperiences = () => {
                   {selectedTab.title}
                 </div>
               </div>
-              {selectedTab.responsibility}
+              <div className="work-responsibility">
+                {selectedTab.responsibility}
+              </div>
+              
 
               
 

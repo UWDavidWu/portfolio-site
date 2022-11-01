@@ -1,7 +1,7 @@
 :root {
-  --themecolor-main: rgb(198,155,245);
-  --themecolor-main-light: rgb(223,210,254);
-  --themecolor-background: #0f1321;
+  --themecolor-main: #A5C9CA;
+  --themecolor-main-light: #E7F6F2;
+  --themecolor-background: #3C4048;
   --themecolor-background-dark: #7d89b1;
   --themecolor-background-light: rgba(87, 95, 155, 0.2);
   --themecolor-default: #cfccc9;
@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: rgb(13,17,40);
+  background-color: var(--themecolor-background);
 }
 
 a,
@@ -153,10 +153,7 @@ section#header {
 
 .bottom-nav {
   overflow: hidden;
-  /* background: #0c1e30; */
-  background:transparent;
-
-  /* background: transparent; */
+  background: rgba(87, 95, 155, 0.2);
   backdrop-filter: blur(15px);
   width: max-content;
   padding: 0.7rem, 1.7rem;
@@ -295,7 +292,7 @@ svg {
   font-weight: 400;
 }
 section:not(#header) {
-  padding: 0px 0px 120px 0px;
+  padding: 0px 20px 120px 20px;
 }
 
 @media only screen and (min-width: 768px) {
