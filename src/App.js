@@ -5,7 +5,7 @@ import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact";
 import Workexperiences from "./components/WorkExperience/Workexperiences";
 import { useEffect, useState } from "react";
-import MediaContextProvider from "./components/MediaContext";
+
 import TopNav from "./components/TopNav/TopNav";
 import { useScrollDirection } from "react-use-scroll-direction";
 import Technologies from "./components/Technologies/Technologies";
@@ -60,7 +60,7 @@ function App() {
 
   return (
     <>
-      <MediaContextProvider>
+
 
 
         <TopNav
@@ -80,7 +80,7 @@ function App() {
 
         </main>
         <Footer />
-      </MediaContextProvider>
+
     </>
   );
 }

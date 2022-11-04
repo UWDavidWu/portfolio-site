@@ -1,5 +1,7 @@
 import { FadeInFromBottom, ColorChange } from "./Animation";
 import resume from "../static/David_Wu.pdf";
+import backgound from "../static/background.mp4";
+
 const Header = () => {
   const intro = [
     ["Name", "David Wu"],
@@ -8,6 +10,10 @@ const Header = () => {
   ];
   return (
     <section id="header">
+
+    {/* <video className='videoTag' autoPlay loop muted>
+        <source src={backgound} type='video/mp4' />
+    </video> */}
 
       <div className="intro">
         {intro.map((item, index) => (

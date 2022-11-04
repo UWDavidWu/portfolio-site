@@ -48,7 +48,8 @@ section {
 
 section#header {
   height: 100vh;
-  /* background-image: url("../public/static/img/background.jpg"); */
+  background-image: url("../src/static/background.webp");
+  background-size: cover;
   /* background-color: var(--themecolor-grey); */
 }
 
@@ -303,4 +304,9 @@ section:not(#header) {
     font-size: 4rem;
   }
 }
+
+/* section#technology {
+  background-image: url("../src/static/technology.webp");
+  background-size: cover;
+} */
 

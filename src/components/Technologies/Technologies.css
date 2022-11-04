@@ -4,6 +4,7 @@
     gap: 1rem;
     padding: 5px;
     border-radius: 2rem;
+    margin: 0 auto;
     /* background-color:var( --themecolor-darkgrey); */
   }
   
@@ -85,4 +86,20 @@
       transform: translateX(-3px);
       opacity: 1;
     }
+  }
+
+
+  .tech-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .tech-row{
+    flex:1;
+    min-height: 200px;
+    
+    min-width: 200px;
+    max-width: 200px;
+    background-color: var(--themecolor-main);
   }
