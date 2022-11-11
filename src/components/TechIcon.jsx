@@ -28,7 +28,7 @@ const TechIcon = ({ Icon, Name, Level }) => {
         style={{ display: "flex", flexDirection: "column" }}
       >
         <div className="hero-icon-name">{Name}</div>
-        <div className="star">
+        {/* <div className="star">
           {[...Array(Level)].map((e, i) => (
             <FadeInWhenVisible key={i} delay={i * 0.5}>
               <AiFillStar />
@@ -39,7 +39,7 @@ const TechIcon = ({ Icon, Name, Level }) => {
               <AiOutlineStar />
             </FadeInWhenVisible>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

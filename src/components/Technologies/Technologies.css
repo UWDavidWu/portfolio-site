@@ -8,9 +8,14 @@
     /* background-color:var( --themecolor-darkgrey); */
   }
   
-  .hero-icon {
-    display: flex;
+
+    .hero-icon {
+      display: flex;
+      align-items: center;
+      
   }
+
+  
   
   .hero-icon-icon {
     display: flex;
@@ -46,7 +51,8 @@
   
   .hero-icon-name {
     opacity: 1;
-    font-size: 20px;
+    font-size: var( --font-large);
+    /* color: var(--themecolor-text); */
   }
   
   @media only screen and (min-width: 768px) {

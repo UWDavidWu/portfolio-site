@@ -101,7 +101,7 @@ export const workexperiences = [
 export const projects = [
   {
     name: "Headlines Now",
-    description: "MERN stack web application  ",
+    description: "MERN stack web application with various categories and allow user to search and save favorite news",
     img: require("./img/projects/project1.png"),
     tech: "MongoDB Express React Nodejs",
     github: "https://github.com/UWDavidWu/news-react-fullstack",
@@ -110,7 +110,7 @@ export const projects = [
   {
     name: "Go News Backend",
     description:
-      "Highly available microservice architecture through Kubernetes cluster on AWS EKS using K9s ",
+      "Consolidate global News from REST API with Kubernetes cluster on AWS EKS ",
     img: require("./img/projects/project2.png"),
     tech: "Go PostgreSQL Kubernetes Docker AWS",
     github: "https://github.com/UWDavidWu/news-go-backend",
@@ -118,7 +118,7 @@ export const projects = [
   },
   {
     name: "Headlines NLP",
-    description: "Sentiment Analysison on headlines, provided trendy topics for News readers",
+    description: "Sentiment Analysis on headlines, provided trendy topics for News readers",
     img: require("./img/projects/project3.png"),
     tech: "Python",
     github: "https://github.com/UWDavidWu/news-python-nlp",
@@ -224,4 +224,4 @@ export const navbar_content = [
 ];
 
 export const selfIntro =
-  "";
+  "love to build things, love to learn new things, love to solve problems. I am a full-stack developer with a passion for data science and machine learning. I am also a graduate student at the UniveI am looking for a full-time position as a Data Scientist or Software Engineer.";

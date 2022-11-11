@@ -1,13 +1,10 @@
 import { FadeInFromBottom, ColorChange } from "./Animation";
 import resume from "../static/David_Wu.pdf";
-import backgound from "../static/background.mp4";
+
 
 const Header = () => {
   const intro = [
-    ["Name", "David Wu"],
-    ["Now", "Recent Grad"],
-    ["Goal", "Dev Ready"],
-  ];
+"David Wu","Recent Grad","Dev Ready"];
   return (
     <section id="header">
 
@@ -19,9 +16,9 @@ const Header = () => {
         {intro.map((item, index) => (
           <FadeInFromBottom key={index} delay={0.9 + 0.2 * index}>
             <ColorChange delay={1 + 1.5 * index}>
-              <span className="intro-before">&lt;{item[0]}&gt;</span>
-              {item[1]}
-              <span className="intro-after">&lt;{item[0]}/&gt;</span>
+
+              {item}
+ 
             </ColorChange>
           </FadeInFromBottom>
         ))}
