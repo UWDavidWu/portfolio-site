@@ -11,7 +11,7 @@ import {
 
 } from "react-icons/di";
 
-import { SiExpress, SiKubernetes } from "react-icons/si";
+import { SiFlask, SiKubernetes, SiMysql } from "react-icons/si";
 
 import {FaAws} from "react-icons/fa";
 
@@ -101,7 +101,7 @@ export const workexperiences = [
 export const projects = [
   {
     name: "Headlines Now",
-    description: "MERN stack web application with various categories and allow user to search and save favorite news",
+    description: "MERN stack web application for users to search, like and share news",
     img: require("./img/projects/project1.png"),
     tech: "MongoDB Express React Nodejs",
     github: "https://github.com/UWDavidWu/news-react-fullstack",
@@ -110,7 +110,7 @@ export const projects = [
   {
     name: "Go News Backend",
     description:
-      "Consolidate global News from REST API with Kubernetes cluster on AWS EKS ",
+      "Consolidate global News from REST API with Kubernetes cluster on AWS ",
     img: require("./img/projects/project2.png"),
     tech: "Go PostgreSQL Kubernetes Docker AWS",
     github: "https://github.com/UWDavidWu/news-go-backend",
@@ -118,7 +118,7 @@ export const projects = [
   },
   {
     name: "Headlines NLP",
-    description: "Sentiment Analysis on headlines, provided trendy topics for News readers",
+    description: "Sentiment Analysis on headlines, provided trendy topics for different countries",
     img: require("./img/projects/project3.png"),
     tech: "Python",
     github: "https://github.com/UWDavidWu/news-python-nlp",
@@ -136,15 +136,16 @@ export const projects = [
 ];
 
 export const heroIcons = [
-  {
-    icon: [DiPython],
-    name: "Python",
-    level: 3,
-  },
+  
   {
     icon: [SiKubernetes],
     name: "Kubernetes",
     level: 2,
+  },
+  {
+    icon: [DiPython],
+    name: "Python",
+    level: 3,
   },
   {
     icon: [DiHtml5],
@@ -168,13 +169,13 @@ export const heroIcons = [
     level: 3,
   },
   {
-    icon: [SiExpress],
-    name: "Express",
+    icon: [SiFlask],
+    name: "Flask",
     level: 2,
   },
   {
-    icon: [DiMongodb],
-    name: "MongoDB",
+    icon: [SiMysql],
+    name: "SQL",
     level: 2,
   },
   {
@@ -222,6 +223,3 @@ export const navbar_content = [
     icon: <FiAward />,
   },
 ];
-
-export const selfIntro =
-  "love to build things, love to learn new things, love to solve problems. I am a full-stack developer with a passion for data science and machine learning. I am also a graduate student at the UniveI am looking for a full-time position as a Data Scientist or Software Engineer.";
